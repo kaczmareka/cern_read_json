@@ -5,8 +5,6 @@ def function(file_path):
     #read json file to a Python dictionary
     with open(file_path) as json_file:
         json_content = json.load(json_file)
-    print(type(json_content))
-    print(json_content)
     #convert dictionary to OrderedDict, to have also indexes easily available
     ordered_json_content=OrderedDict(json_content)
     #get the keys of the dictionary
@@ -29,7 +27,6 @@ def function(file_path):
     return returned
 
 def main():
-    print("Hello you!") #prints to stdout by definition, according to python documentation
     variable=function('tmp\deps2.json')
     print(variable)
 
