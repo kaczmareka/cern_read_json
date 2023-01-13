@@ -17,10 +17,12 @@ def json_to_graph_function(
         to_print: str
     ) -> str:
         """
-        Function that recursively adds the names of the packages and dependencies to the string to be printed.
+        Function that recursively adds the names of the packages 
+        and dependencies to the string to be printed.
         Args:
             values (list): list of dependencies.
-            indent (int): number of spaces to indent the current dependency.
+            indent (int): number of spaces to indent the current 
+            dependency.
             to_print (str): string to be printed.
         """
 
@@ -30,7 +32,8 @@ def json_to_graph_function(
                 to_print += str("  "*indent + f"-{value}" + "\n")
                 indent += 1
                 # Recursively add the dependencies of the current dependency.
-                to_print = recursively_add_names(ordered_json_content[value], indent, to_print)
+                to_print = recursively_add_names(ordered_json_content[value],
+                                                 indent, to_print)
                 indent -= 1
             else:
                 to_print += str("  "*indent + f"-{value}" + "\n")
@@ -45,7 +48,7 @@ def json_to_graph_function(
     keys = list(ordered_json_content.keys())
     to_print = ""
     indent = 0
-    # Add the names of the packages and dependencies to the string to be printed.
+    # Add the names of the packages and dependencies to the string.
     to_print = recursively_add_names(keys, indent, to_print)
     # Remove the last newline character.
     to_print = to_print[:-1]
