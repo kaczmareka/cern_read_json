@@ -1,11 +1,17 @@
-import pytest
-from function_new import *
+import json_to_graph
 
-def test_function():
-    variable=function_new('tmp\\deps2.json')
-    assert type(variable)==str
 
-def test_function_working():
-    variable=function_new('tmp\\deps.json')
-    splited_variable=variable.split("\n")
-    assert splited_variable==['-pkg1', '  -pkg2', '    -pkg3', '  -pkg3', '-pkg2', '  -pkg3', '-pkg3']
+"""
+Tests of the json_to_graph_function function.
+"""
+
+def test_output_type():
+    to_print = json_to_graph.json_to_graph_function('tmp\\deps2.json')
+    assert isinstance(to_print, str)
+
+
+def test_output_content():
+    to_print = json_to_graph.json_to_graph_function('tmp\\deps.json')
+    splited_to_print = to_print.split("\n")
+    assert splited_to_print == ['-pkg1', '  -pkg2', '    -pkg3',
+                                '  -pkg3', '-pkg2', '  -pkg3', '-pkg3']
