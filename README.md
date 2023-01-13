@@ -11,8 +11,8 @@ python -m dep_graph
 ```
 
 ## Solution description
-<!--  -->in general what is it
-
+in general what is it,
+what needs to be installed to run it
 
 ## Task description
 
