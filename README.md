@@ -1,18 +1,27 @@
 ## Overview
 
-This is a repository with implementation of a module in Python, which aims to read a JSON file.
+This is a repository with implementation of a module in Python, which aims to read a JSON file and create the full dependency graph.
 
 Implemented by: Agata Kaczmarek
 
 ## How to run?
 
+To run the module:
 ```sh
 python -m dep_graph
 ```
+To run the tests for the module, you have to install `pytest` from `requirements.txt` file or with:
+```sh
+pip install -U pytest
+```
+and run tests with:
+```sh
+pytest
+```
 
 ## Solution description
-in general what is it,
-what needs to be installed to run it
+
+The created program reads a JSON file from a fixed location and creates a full dependency graph, based on the content of that file. To do so, it uses only built-in Python functions. Function reading and converting JSON is called json_to_graph_function, stored in `json_to_graph.py`. To correctly return names of the dependencies the nested function `recursively_add_names` is implemented inside `json_to_graph_function`.
 
 ## Task description
 
