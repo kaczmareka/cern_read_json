@@ -21,7 +21,7 @@ pytest
 
 ## Solution description
 
-The created program reads a JSON file from a fixed location and creates a full dependency graph, based on the content of that file. To do so, it uses only built-in Python functions. Function reading and converting JSON is called json_to_graph_function, stored in `json_to_graph.py`. To correctly return the names of the dependencies the nested function `recursively_add_names` is implemented inside `json_to_graph_function`.
+The created program reads a JSON file from a fixed location and creates a full dependency graph, based on the content of that file. To do so, it uses only built-in Python functions. Function reading and converting JSON is called json_to_graph_function, stored in `json_to_graph.py`. To correctly return the names of the dependencies the nested function `recursively_add_names` is implemented inside `json_to_graph_function`. To test the solution, `pytest` framework is used. Two tests are included in `test_sample.py` file.
 
 ## Task description
 
