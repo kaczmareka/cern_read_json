@@ -1,6 +1,7 @@
 ## Overview
 
-This is a repository with implementation of a package in Python, which aims to read a JSON file.
+This is a repository with implementation of a module in Python, which aims to read a JSON file.
+
 Implemented by: Agata Kaczmarek
 
 ## How to run?
@@ -8,6 +9,10 @@ Implemented by: Agata Kaczmarek
 ```sh
 python -m dep_graph
 ```
+
+## Solution description
+<!--  -->in general what is it
+
 
 ## Task description
 
